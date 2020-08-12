@@ -24,7 +24,7 @@ const reducer = (state, action) => {
 
 const MainPage = () => {
 
-    const [state, dispatch] = useReducer(reducer, { route: 'home', data: {}, url: '' })
+    const [state, dispatch] = useReducer(reducer, { route: 'home', data: {}, url: '', searchField: '' })
 
     const { isLoading, data, error } = useDataFetch(state.url)
 
@@ -42,7 +42,6 @@ const MainPage = () => {
                     :
                     <Characters data={data} />
                 )
-
             }
         </section>
     )

@@ -45,4 +45,34 @@
   border-radius: 10px;
 }
 
+/* Characters */
+
+.expandable {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.speciesContainer {
+  width: 100%;
+}
+
+.speciesContainer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.species {
+  width: 20%;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
