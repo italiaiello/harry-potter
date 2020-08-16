@@ -52,6 +52,25 @@
   margin: 0 auto;
 }
 
+.expandable:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.dropdown {
+  width: 100%;
+  background-color: #4d4d4d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.dropdown button {
+  position: absolute;
+  right: 20px;
+}
+
 .speciesContainer {
   width: 100%;
 }

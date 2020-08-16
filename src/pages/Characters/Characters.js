@@ -1,5 +1,5 @@
 import React from 'react';
-import CharacterSelection from '../CharacterSelection/CharacterSelection';
+import CharacterSelection from '../../components/CharacterSelection/CharacterSelection';
 
 const Characters = ({ data }) => {
 

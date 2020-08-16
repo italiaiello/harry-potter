@@ -13,7 +13,7 @@ const CharacterSelection = ({ title, characterData }) => {
 
     return (
         <section className={showCharacters ? 'expandable open' : 'expandable collapse'}>
-            <article>
+            <article className="dropdown">
                 <p>{title}</p>
                 <button onClick={ toggleCharacters }>{showCharacters ? 'Close' : 'Open'}</button>
             </article>

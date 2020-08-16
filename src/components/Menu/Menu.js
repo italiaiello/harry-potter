@@ -1,9 +1,9 @@
 import React from 'react';
-import { ACTIONS } from '../MainPage/MainPage';
+import MenuItem from '../MenuItem/MenuItem';
 
 const Menu = ({ dispatch }) => {
 
-    const apiKey = 'YOUR_API_KEY'
+    const apiKey = 'YOUR_API_KEY_HERE'
 
     return (
         <section id="menuContainer">
@@ -12,42 +12,10 @@ const Menu = ({ dispatch }) => {
             <section id="menu">
                 <h4>What would you like to do?</h4>
                 <section id="menuItemContainer">
-                    <article    
-                        className="menuItem option" 
-                        onClick={() => {
-                            dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: { route: 'houses' } })
-                            dispatch({ type: ACTIONS.SET_URL, payload: { url: `characters?key=${apiKey}` } })
-                        }}
-                    >
-                        <h3>Characters</h3>
-                    </article>
-                    <article    
-                        className="menuItem option" 
-                        onClick={() => {
-                            dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: { route: 'houses' } })
-                            dispatch({ type: ACTIONS.SET_URL, payload: { url: `houses?key=${apiKey}` } })
-                        }}
-                    >
-                        <h3>Houses</h3>
-                    </article>
-                    <article    
-                        className="menuItem option" 
-                        onClick={() => {
-                            dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: { route: 'houses' } })
-                            dispatch({ type: ACTIONS.SET_URL, payload: { url: `spells?key=${apiKey}` } })
-                        }}
-                    >
-                        <h3>Spells</h3>
-                    </article>
-                    <article    
-                        className="menuItem option" 
-                        onClick={() => {
-                            dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: { route: 'houses' } })
-                            dispatch({ type: ACTIONS.SET_URL, payload: { url: `sortingHat` } })
-                        }}
-                    >
-                        <h3>Sorting Hat</h3>
-                    </article>
+                    <MenuItem dispatch={dispatch} route={'characters'} url={`characters?key=${apiKey}`} title={'Characters'} />
+                    <MenuItem dispatch={dispatch} route={'houses'} url={`houses?key=${apiKey}`} title={'Houses'} />
+                    <MenuItem dispatch={dispatch} route={'spells'} url={`spells?key=${apiKey}`} title={'Spells'} />
+                    <MenuItem dispatch={dispatch} route={'sortingHat'} url={`sortingHat?key=${apiKey}`} title={'Sorting Hat'} />
                 </section>
             </section>
         </section>
