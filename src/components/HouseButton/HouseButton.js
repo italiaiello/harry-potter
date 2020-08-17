@@ -8,13 +8,13 @@ const HouseButton = ({ logo, altText, houseId, dispatch }) => {
 
     return (
         <figure 
-            className="houseButton option" 
+            className="houseButton" 
             onClick={() => {
                 dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: { route: 'houseDetails' } })
                 dispatch({ type: ACTIONS.SET_URL, payload: { url: url } })
             }}
         >
-            <img src={logo} alt={altText} />
+            <img src={logo} alt={altText} className="option" />
         </figure>
     )
 }

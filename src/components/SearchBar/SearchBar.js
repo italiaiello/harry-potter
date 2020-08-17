@@ -4,7 +4,6 @@ const SearchBar = ({ title, data, setData }) => {
 
     
     const onSearchChange = (e) => {
-        console.log(e.target.value)
         const filteredData = data.filter(datum => datum.name.toLowerCase().includes(e.target.value.toLowerCase()))
         setData(filteredData)
     }

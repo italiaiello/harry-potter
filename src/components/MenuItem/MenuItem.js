@@ -7,7 +7,6 @@ const MenuItem = ({dispatch, route, url, title}) => {
         <article    
             className="menuItem option" 
             onClick={() => {
-                console.log(route, url)
                 dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: { route: route } })
                 dispatch({ type: ACTIONS.SET_URL, payload: { url: url } })
             }}

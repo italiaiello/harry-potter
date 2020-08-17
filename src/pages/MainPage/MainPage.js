@@ -2,8 +2,10 @@ import React, { useReducer } from 'react'
 import Menu from '../../components/Menu/Menu';
 import Characters from '../Characters/Characters';
 import Houses from '../Houses/Houses';
-import HouseDetails from '../HouseDetails/HouseDetails';
 import Spells from '../../pages/Spells/Spells';
+import SortingHat from '../SortingHat/SortingHat';
+import HouseDetails from '../HouseDetails/HouseDetails';
+
 import { useDataFetch } from '../../hooks/useDataFetch';
 
 export const ACTIONS = {
@@ -42,6 +44,8 @@ const MainPage = () => {
                 return <Houses dispatch={dispatch} data={data} />;
             case 'spells':
                 return <Spells dispatch={dispatch} data={data} />;
+            case 'sortingHat':
+                return <SortingHat dispatch={dispatch} />;
             case 'houseDetails':
                 return <HouseDetails dispatch={dispatch} data={data} />;
             default:

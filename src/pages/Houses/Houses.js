@@ -1,14 +1,12 @@
 import React from 'react'
 import HouseButton from '../../components/HouseButton/HouseButton'
 
-import Gryffindor from '../../assets/images/gryffindor.jpg'
+import Gryffindor from '../../assets/images/gryffindor.png'
 import Hufflepuff from '../../assets/images/hufflepuff.jpg'
-import Slytherin from '../../assets/images/slytherin.jpg'
-import Ravenclaw from '../../assets/images/ravenclaw.jpg'
+import Slytherin from '../../assets/images/slytherin.png'
+import Ravenclaw from '../../assets/images/ravenclaw.png'
 
 const Houses = ({ data, dispatch }) => {
-
-    console.log(data)
 
     return (
         <section id="houses">
