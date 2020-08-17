@@ -11,7 +11,7 @@ export const ACTIONS = {
     SET_URL: 'set-url'
 }
 
-export const API_KEY = '$2a$10$1hdFPKfYrRPq5kZAKlDHSe1G8SWSoH2cFcMNk9YGh29R9wrwS2Pia'
+export const API_KEY = 'YOUR_API_KEY_HERE'
 
 const reducer = (state, action) => {
     switch (action.type) {
