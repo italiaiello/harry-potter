@@ -24,7 +24,7 @@ const CharacterSelection = ({ title, characterData }) => {
                     <div>
                         {
                             filteredCharacters.map((character, i) => (
-                                <p key={i} className="species">{character.name}</p>
+                                <p key={i} className="species option">{character.name}</p>
                             ))
                         }
                     </div>

@@ -1,9 +1,8 @@
 import React from 'react';
 import MenuItem from '../MenuItem/MenuItem';
+import { API_KEY } from '../../pages/MainPage/MainPage';
 
 const Menu = ({ dispatch }) => {
-
-    const apiKey = 'YOUR_API_KEY_HERE'
 
     return (
         <section id="menuContainer">
@@ -12,10 +11,10 @@ const Menu = ({ dispatch }) => {
             <section id="menu">
                 <h4>What would you like to do?</h4>
                 <section id="menuItemContainer">
-                    <MenuItem dispatch={dispatch} route={'characters'} url={`characters?key=${apiKey}`} title={'Characters'} />
-                    <MenuItem dispatch={dispatch} route={'houses'} url={`houses?key=${apiKey}`} title={'Houses'} />
-                    <MenuItem dispatch={dispatch} route={'spells'} url={`spells?key=${apiKey}`} title={'Spells'} />
-                    <MenuItem dispatch={dispatch} route={'sortingHat'} url={`sortingHat?key=${apiKey}`} title={'Sorting Hat'} />
+                    <MenuItem dispatch={dispatch} route={'characters'} url={`characters?key=${API_KEY}`} title={'Characters'} />
+                    <MenuItem dispatch={dispatch} route={'houses'} url={`houses?key=${API_KEY}`} title={'Houses'} />
+                    <MenuItem dispatch={dispatch} route={'spells'} url={`spells?key=${API_KEY}`} title={'Spells'} />
+                    <MenuItem dispatch={dispatch} route={'sortingHat'} url={`sortingHat?key=${API_KEY}`} title={'Sorting Hat'} />
                 </section>
             </section>
         </section>

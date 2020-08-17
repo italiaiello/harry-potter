@@ -2,12 +2,16 @@ import React, { useReducer } from 'react'
 import Menu from '../../components/Menu/Menu';
 import Characters from '../Characters/Characters';
 import Houses from '../Houses/Houses';
+import HouseDetails from '../HouseDetails/HouseDetails';
+import Spells from '../../pages/Spells/Spells';
 import { useDataFetch } from '../../hooks/useDataFetch';
 
 export const ACTIONS = {
     CHANGE_ROUTE: 'change-route',
     SET_URL: 'set-url'
 }
+
+export const API_KEY = '$2a$10$1hdFPKfYrRPq5kZAKlDHSe1G8SWSoH2cFcMNk9YGh29R9wrwS2Pia'
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -35,7 +39,11 @@ const MainPage = () => {
             case 'characters':
                 return <Characters data={data} />;
             case 'houses':
-                return <Houses data={data} />;
+                return <Houses dispatch={dispatch} data={data} />;
+            case 'spells':
+                return <Spells dispatch={dispatch} data={data} />;
+            case 'houseDetails':
+                return <HouseDetails dispatch={dispatch} data={data} />;
             default:
                 return <>Invalid route</>
         }
