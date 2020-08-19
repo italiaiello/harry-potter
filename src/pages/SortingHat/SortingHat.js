@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Gryffindor from '../../assets/images/gryffindor.png'
-import Hufflepuff from '../../assets/images/hufflepuff.jpg'
+import Hufflepuff from '../../assets/images/hufflepuff.png'
 import Slytherin from '../../assets/images/slytherin.png'
 import Ravenclaw from '../../assets/images/ravenclaw.png'
 import Hat from '../../assets/images/sortingHat.png'

@@ -2,7 +2,7 @@ import React from 'react'
 import HouseButton from '../../components/HouseButton/HouseButton'
 
 import Gryffindor from '../../assets/images/gryffindor.png'
-import Hufflepuff from '../../assets/images/hufflepuff.jpg'
+import Hufflepuff from '../../assets/images/hufflepuff.png'
 import Slytherin from '../../assets/images/slytherin.png'
 import Ravenclaw from '../../assets/images/ravenclaw.png'
 
