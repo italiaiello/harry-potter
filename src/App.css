@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+section {
+  position: relative;
+}
+
 /* Class for hovering and clicking on elements */
 
 .option {
@@ -96,6 +100,14 @@
 
 /* Houses */
 
+#houses {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #houseButtons {
   display: flex;
   justify-content: center;
@@ -129,6 +141,61 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Character Details */
+
+.characterDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.characterDetails {
+  width: 30%;
+  height: 50vh;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.characterDetails p {
+  text-align: left
+}
+
+/* Back Button */
+
+.topbar {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowContainer {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right: 30px solid black; 
+  margin-right: 20px;
 }
 
 

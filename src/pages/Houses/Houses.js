@@ -5,12 +5,13 @@ import Gryffindor from '../../assets/images/gryffindor.png'
 import Hufflepuff from '../../assets/images/hufflepuff.png'
 import Slytherin from '../../assets/images/slytherin.png'
 import Ravenclaw from '../../assets/images/ravenclaw.png'
+import BackArrow from '../../components/BackArrow/BackArrow'
 
 const Houses = ({ data, dispatch }) => {
 
     return (
         <section id="houses">
-            <h1>Houses</h1>
+            <BackArrow newRoute={'home'} newUrl={'characters'} dispatch={dispatch} title={'Houses'} />
             <article id="houseButtons">
                 {
                     data !== null &&
