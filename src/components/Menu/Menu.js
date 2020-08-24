@@ -6,7 +6,7 @@ const Menu = ({ dispatch }) => {
 
     return (
         <section id="menuContainer">
-            <h2>Welcome to the Harry Potter API</h2>
+            <h2 id="menuHeading">Welcome to the Harry Potter API</h2>
             <h3>Find all the info you need about the series</h3>
             <section id="menu">
                 <h4>What would you like to do?</h4>

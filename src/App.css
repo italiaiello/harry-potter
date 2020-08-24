@@ -1,6 +1,8 @@
 .App {
   min-height: 100vh;
   text-align: center;
+  background-color: #121212;
+  color: white;
 }
 
 section {
@@ -27,6 +29,11 @@ section {
 #menuContainer {
   width: 80%;
   margin: 0 auto;
+}
+
+#menuHeading {
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 #menuItemContainer {
