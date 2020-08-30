@@ -1,10 +1,21 @@
 import React from 'react'
 
-const SearchBar = ({ title, data, setData }) => {
+const SearchBar = ({ dataType, data, setData }) => {
 
     
     const onSearchChange = (e) => {
-        const filteredData = data.filter(datum => datum.name.toLowerCase().includes(e.target.value.toLowerCase()))
+        let filteredData = []
+        if (dataType === 'characters') {
+            filteredData = data.filter(datum => datum.name.toLowerCase().includes(e.target.value.toLowerCase()))
+        } else {
+            filteredData = data.filter(datum => {
+                const spell = datum.spell.toLowerCase().includes(e.target.value.toLowerCase())
+                const effect = datum.effect.toLowerCase().includes(e.target.value.toLowerCase())
+
+                return spell || effect
+            })
+        }
+
         setData(filteredData)
     }
 

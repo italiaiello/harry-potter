@@ -59,12 +59,12 @@ const MainPage = () => {
 
     return (
         <section id="homePage">
+
             {
                 isLoading ?
                 <LoadingIcon />
                 :
                 loadPage(state.route)
-                
             }
         </section>
     )

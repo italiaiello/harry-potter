@@ -18,6 +18,34 @@ section {
   position: relative;
 }
 
+/* Arrows */
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Loading SVG */
+
+.loadingIconContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Class for hovering and clicking on elements */
 
 .option {
@@ -101,7 +129,7 @@ section {
 
 .dropdown {
   width: 100%;
-  background-color: #4d4d4d;
+  background-color: #222222;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -111,7 +139,14 @@ section {
 
 .dropdown button {
   position: absolute;
-  right: 20px;
+  right: 0;
+  cursor: pointer;
+  width: 10%;
+  height: 100%;
+  background-color: #B11A21;
+  color: white;
+  border: none;
+  outline: none;
 }
 
 .speciesContainer {
@@ -235,6 +270,37 @@ section {
   border-bottom: 30px solid transparent; 
   border-right: 30px solid black; 
   margin-right: 20px;
+}
+
+/* Spell Selection */
+
+.spell {
+  height: 100px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
+/* Character Colors */
+
+.Gryffindor {
+  background-color: #B11A21;
+}
+
+.Hufflepuff {
+  background-color: #B68115;
+}
+
+.Slytherin {
+  background-color: #25A943;
+}
+
+.Ravenclaw {
+  background-color: #0F8BC1;
 }
 
 

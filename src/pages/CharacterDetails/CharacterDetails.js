@@ -24,12 +24,12 @@ const CharacterDetails = ({ data, dispatch }) => {
     return (
         <section className="characterDetailsContainer">
             <BackArrow newRoute={'home'} newUrl={'characters'} title={`Profile: ${data.name}`} dispatch={dispatch} />
-            <article className="characterDetails">
+            <article className={`characterDetails ${data.house}`}>
                 <h2>{data.name}</h2>
                 <article>
                     <p>{`Alliances: ${alliances}`}</p>
                     <p>{`Blood Status: ${data.bloodStatus}`}</p>
-                    <p>{`House: ${data.house}`}</p>
+                    <p>{`House: ${data.house !== undefined ? data.house : 'Unknown'}`}</p>
                     <p>{`Species: ${data.species}`}</p>
                 </article>
 
