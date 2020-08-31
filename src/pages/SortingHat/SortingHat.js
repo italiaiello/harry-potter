@@ -4,8 +4,9 @@ import Hufflepuff from '../../assets/images/hufflepuff.png'
 import Slytherin from '../../assets/images/slytherin.png'
 import Ravenclaw from '../../assets/images/ravenclaw.png'
 import Hat from '../../assets/images/sortingHat.png'
+import BackArrow from '../../components/BackArrow/BackArrow'
 
-const SortingHat = () => {
+const SortingHat = ({ dispatch }) => {
 
     const houses = [Gryffindor, Hufflepuff, Slytherin, Ravenclaw];
 
@@ -21,8 +22,10 @@ const SortingHat = () => {
 
     return (
         <section id="sortingHatContainer">
-            <h2>Sorting Hat</h2>
-            <h3>Which house are most suited to?</h3>
+            <div className="heading">
+                <BackArrow newRoute={'home'} title="Sorting Hat" newUrl={'characters'} dispatch={dispatch} />
+                <h3>Which house are you most suited to?</h3>
+            </div>
             <article id="sortingHat">
                 {
                     <figure id="sortingHatResult">
@@ -36,9 +39,9 @@ const SortingHat = () => {
                 }
                 {
                     index < 0 ?
-                    <button className="sortingHatButton" onClick={getRandomIndex}>Find House</button>
+                    <button className="sortingHatButton option" onClick={getRandomIndex}>Find House</button>
                     :
-                    <button className="sortingHatButton" onClick={resetIndex}>Have Another Go</button>
+                    <button className="sortingHatButton option" onClick={resetIndex}>Have Another Go</button>
                 }
             </article>
         </section>

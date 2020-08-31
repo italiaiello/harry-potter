@@ -5,9 +5,7 @@ import { API_KEY } from '../../pages/MainPage/MainPage'
 const BackArrow = ({ newRoute, newUrl, dispatch, title }) => {
     return (
         <section className="topbar">
-            <div    className="arrowContainer" 
-                    
-            >
+            <div className="arrowContainer">
                 <div    className="arrow-left option"
                         onClick={() => {
                             dispatch({ type: ACTIONS.CHANGE_ROUTE, payload: {route: newRoute}})
@@ -17,7 +15,11 @@ const BackArrow = ({ newRoute, newUrl, dispatch, title }) => {
                 </div>
                 <p>Back to Menu</p>
             </div>
-            <h2>{`${title}`}</h2>
+            {
+                title &&
+                <h2>{`${title}`}</h2>
+            }
+            
         </section>
     )
 }

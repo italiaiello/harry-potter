@@ -1,5 +1,6 @@
 import React from 'react';
 import CharacterSelection from '../../components/CharacterSelection/CharacterSelection';
+import BackArrow from '../../components/BackArrow/BackArrow';
 
 const Characters = ({ dispatch, data }) => {
 
@@ -14,10 +15,12 @@ const Characters = ({ dispatch, data }) => {
     }
 
     return (
-        <section id="characters">
-            <h1>Characters</h1>
-            <CharacterSelection title={'Humans'} characterData={humans} dispatch={dispatch} />
-            <CharacterSelection title={'Creatures'} characterData={creatures} dispatch={dispatch} />
+        <section className="characters container">
+            <BackArrow title="Characters" newUrl={'characters'} newRoute={'home'} dispatch={dispatch} />
+            <section className="container-section">
+                <CharacterSelection title={'Humans'} characterData={humans} dispatch={dispatch} />
+                <CharacterSelection title={'Creatures'} characterData={creatures} dispatch={dispatch} />
+            </section>
         </section>
     )
 }

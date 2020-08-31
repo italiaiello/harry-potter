@@ -22,9 +22,9 @@ const CharacterDetails = ({ data, dispatch }) => {
     }
 
     return (
-        <section className="characterDetailsContainer">
-            <BackArrow newRoute={'home'} newUrl={'characters'} title={`Profile: ${data.name}`} dispatch={dispatch} />
-            <article className={`characterDetails ${data.house}`}>
+        <section className="detailsContainer">
+            <BackArrow newRoute={'home'} newUrl={'characters'} dispatch={dispatch} />
+            <article className={`details ${data.house}`}>
                 <h2>{data.name}</h2>
                 <article>
                     <p>{`Alliances: ${alliances}`}</p>

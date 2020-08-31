@@ -18,6 +18,21 @@ section {
   position: relative;
 }
 
+/* CSS for Characters and Spells sections */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-section {
+  width: 100%;
+  min-height: 90vh;
+}
+
 /* Arrows */
 
 .arrow {
@@ -175,11 +190,17 @@ section {
 /* Houses */
 
 #houses {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+}
+
+#houses .topbar {
+  position: absolute;
+  top: 20px;
 }
 
 #houseButtons {
@@ -205,8 +226,22 @@ section {
 
 /* Sorting Hat */
 
+#sortingHatContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.heading {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+}
+
 #sortingHatResult {
-  width: 40%;
+  width: 50%;
   height: 50vh;
   margin: 20px auto;
 }
@@ -217,17 +252,33 @@ section {
   object-fit: contain;
 }
 
-/* Character Details */
+.sortingHatButton {
+  background-color: #6d6c6c;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
 
-.characterDetailsContainer {
+/* CSS for Character Details and House Details */
+
+.detailsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
-.characterDetails {
+.detailsContainer .topbar {
+  position: absolute;
+  top: 20px;
+}
+
+.details {
   width: 30%;
   height: 50vh;
   background-color: black;
@@ -239,7 +290,15 @@ section {
   align-items: center;
 }
 
-.characterDetails p {
+.details h2 {
+  color: white;
+}
+
+.details article {
+  width: 80%;
+}
+
+.details p {
   text-align: left
 }
 
@@ -247,9 +306,7 @@ section {
 
 .topbar {
   width: 100%;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,12 +322,14 @@ section {
 
 .arrow-left {
   width: 0; 
-  height: 0; 
+  height: 0;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent; 
-  border-right: 30px solid black; 
+  border-right: 30px solid #504f4f; 
   margin-right: 20px;
 }
+
+
 
 /* Spell Selection */
 
